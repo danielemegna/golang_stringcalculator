@@ -2,7 +2,7 @@
 
 Gym for Go lang study
 
-## Dev Notes
+## Run dev isolated docker environment
 
 Build docker dev env:
 
@@ -39,3 +39,12 @@ Run pagkage test inside it:
 $ cd stringcalculator
 $ go test
 ```
+
+## Dev Notes
+
+- http://codingdojo.org/kata/StringCalculator/
+- https://golang.org/pkg/strconv/
+- https://golang.org/pkg/strings/
+- https://gobyexample.com/
+- https://learnxinyminutes.com/docs/go/
+- http://mattyjwilliams.blogspot.com/2013/06/why-im-happy-to-live-without-generics.html
