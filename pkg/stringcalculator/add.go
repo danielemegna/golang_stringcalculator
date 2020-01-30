@@ -2,17 +2,21 @@ package stringcalculator
 
 import "strconv"
 
-
 func Add(numbers string) string {
-  if(numbers == "") {
-    return "0"
+  var result float64 = 0.
+
+  for _, piece := range SplitNumbersString(numbers) {
+    result += parseStringPiece(piece)
   }
 
-  result := 0.
-  for _, number_string := range SplitNumbersString(numbers) {
-    number_float, _ := strconv.ParseFloat(number_string, 64)
-    result += number_float
-  }
+  return formatResult(result)
+}
 
-  return strconv.FormatFloat(result, 'f', -1, 64)
+func formatResult(number float64) string {
+  return strconv.FormatFloat(number, 'f', -1, 64)
+}
+
+func parseStringPiece(piece string) float64 {
+  number, _ := strconv.ParseFloat(piece, 64)
+  return number
 }
