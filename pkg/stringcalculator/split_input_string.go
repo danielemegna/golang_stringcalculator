@@ -2,7 +2,7 @@ package stringcalculator
 
 import "strings"
 
-func SplitNumbersString(numbers string) []string {
+func SplitInputString(numbers string) []string {
   if(numbers == "") {
     return []string{}
   }

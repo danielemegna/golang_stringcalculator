@@ -6,22 +6,22 @@ import (
 )
 
 func TestSingleIntegerString(t *testing.T) {
-  assert.Equal(t, []string{"19"}, SplitNumbersString("19"))
+  assert.Equal(t, []string{"19"}, SplitInputString("19"))
 }
 
 func TestSingleFloatWithDecimalsString(t *testing.T) {
-  assert.Equal(t, []string{"19.9"}, SplitNumbersString("19.9"))
+  assert.Equal(t, []string{"19.9"}, SplitInputString("19.9"))
 }
 
 func TestSomeNumbersSeparatedByComma(t *testing.T) {
   expected := []string{"19", "46", "3.1415"}
-  assert.Equal(t, expected, SplitNumbersString("19,46,3.1415"))
+  assert.Equal(t, expected, SplitInputString("19,46,3.1415"))
 }
 
 func TestEmptyString(t *testing.T) {
-  assert.Equal(t, []string{}, SplitNumbersString(""))
+  assert.Equal(t, []string{}, SplitInputString(""))
 }
 
 func TestSupportNewLineSparator(t *testing.T) {
-  assert.Equal(t, []string{"9", "12", "42.54"}, SplitNumbersString("9,12\n42.54"))
+  assert.Equal(t, []string{"9", "12", "42.54"}, SplitInputString("9,12\n42.54"))
 }

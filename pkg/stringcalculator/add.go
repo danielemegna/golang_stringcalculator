@@ -5,7 +5,7 @@ import "strconv"
 func Add(numbers string) string {
   var result float64 = 0.
 
-  for _, piece := range SplitNumbersString(numbers) {
+  for _, piece := range SplitInputString(numbers) {
     result += parseStringPiece(piece)
   }
 
