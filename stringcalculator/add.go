@@ -4,6 +4,7 @@ import (
   //"fmt"
   //"reflect"
   "strconv"
+  "strings"
 )
 
 //fmt.Println(numbers)
@@ -15,7 +16,13 @@ func Add(numbers string) string {
     return "0"
   }
 
-  result, _ := strconv.ParseFloat(numbers, 32)
+  pieces := strings.Split(numbers, ",")
 
-  return strconv.FormatFloat(result, 'f', -1, 32)
+  result := 0.
+  for _, piece := range pieces {
+    number, _ := strconv.ParseFloat(piece, 64)
+    result += number
+  }
+
+  return strconv.FormatFloat(result, 'f', -1, 64)
 }

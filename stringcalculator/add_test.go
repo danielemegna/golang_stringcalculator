@@ -13,8 +13,13 @@ func TestAddAnEmptyString_ShouldReturnZero(t *testing.T) {
   assert.Equal(t, "0", Add(""))
 }
 
-func TestAddAnSingleNumberString(t *testing.T) {
+func TestAddASingleNumberString(t *testing.T) {
   assert.Equal(t, "1", Add("1"))
   assert.Equal(t, "42", Add("42"))
   assert.Equal(t, "19.9", Add("19.9"))
+}
+
+func TestSumCoupleOfNumbers(t *testing.T) {
+  assert.Equal(t, "3", Add("1,2"))
+  assert.Equal(t, "16.9", Add("16.2,0.7"))
 }
