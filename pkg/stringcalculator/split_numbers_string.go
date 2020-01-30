@@ -3,5 +3,10 @@ package stringcalculator
 import "strings"
 
 func SplitNumbersString(numbers string) []string {
-  return strings.Split(numbers, ",")
+  if(numbers == "") {
+    return []string{}
+  }
+
+  result := strings.Split(numbers, ",")
+  return result
 }
