@@ -1,18 +1,21 @@
 package stringcalculator
 
 import (
-  "fmt"
-  "reflect"
+  //"fmt"
+  //"reflect"
+  "strconv"
 )
 
+//fmt.Println(numbers)
+//fmt.Println(reflect.TypeOf(numbers))
 
 func Add(numbers string) string {
-  fmt.Println(numbers)
-  fmt.Println(reflect.TypeOf(numbers))
 
   if(numbers == "") {
     return "0"
   }
 
-  return numbers
+  result, _ := strconv.ParseFloat(numbers, 32)
+
+  return strconv.FormatFloat(result, 'f', -1, 32)
 }
