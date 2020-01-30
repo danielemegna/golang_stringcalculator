@@ -1,6 +1,8 @@
-## Explore Go
+## Go String Calculator
 
-Gym for Go lang study
+String Calculator kata as gym for Go lang study.
+
+http://codingdojo.org/kata/StringCalculator/
 
 ## Run dev isolated docker environment
 
