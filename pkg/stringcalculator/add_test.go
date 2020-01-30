@@ -23,3 +23,8 @@ func TestSumCoupleOfNumbers(t *testing.T) {
   assert.Equal(t, "3", Add("1,2"))
   assert.Equal(t, "16.9", Add("16.2,0.7"))
 }
+
+func TestSupportNewLineSeparator(t *testing.T) {
+  assert.Equal(t, "5", Add("3\n2"))
+  assert.Equal(t, "6", Add("1\n2,3"))
+}

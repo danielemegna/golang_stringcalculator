@@ -21,3 +21,7 @@ func TestSomeNumbersSeparatedByComma(t *testing.T) {
 func TestEmptyString(t *testing.T) {
   assert.Equal(t, []string{}, SplitNumbersString(""))
 }
+
+func TestSupportNewLineSparator(t *testing.T) {
+  assert.Equal(t, []string{"9", "12", "42.54"}, SplitNumbersString("9,12\n42.54"))
+}

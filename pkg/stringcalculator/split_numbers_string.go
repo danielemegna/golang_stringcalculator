@@ -7,6 +7,9 @@ func SplitNumbersString(numbers string) []string {
     return []string{}
   }
 
-  result := strings.Split(numbers, ",")
+  result := strings.FieldsFunc(numbers, func(c rune) bool {
+    return c == ',' || c == '\n'
+  })
+
   return result
 }
